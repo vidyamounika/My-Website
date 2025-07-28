@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn Page</title>
+    <link href="style.css" rel="stylesheet" >
+
+</head>
+<body>
+      <div class="navbar">
+    <div class="left-links">
+        <a href="./home.html">
+            <img src="./assets/images/logo.jpeg" alt="Logo" class="logo">
+        </a>
+        <a href="./home.html">Home</a>
+        <a href="./About.html">About us</a>
+        <a href="./contact.html">Contact us</a>
+    </div>
+    <div class="right-links">
+        <a href="./signin.html">Sign In</a>
+        <a href="./login.html">Log In</a>
+    </div>
+</div>
+   
+<div class="login_page">
+    <img src="./assets/images/person-circle.jpeg" class="user_icon">
+    <form onsubmit="return signin(event)">
+        <div class="username">
+            <h3>Username:</h3>
+            <input type="text" id="name" placeholder="Username" class="box1" required>
+        </div>
+
+        <div class="email">
+            <h3>Email:</h3>
+            <input type="email" id="mail" placeholder="Email" class="box1" required>
+        </div>
+
+        <div class="password">
+            <h3>Password:</h3>
+            <input type="password" id="password" placeholder="Password" class="box1" required>
+        </div>
+
+        <div class="Confirmpassword">
+            <h3>Confirm Password:</h3>
+            <input type="password" id="confirmpassword" placeholder="Confirm Password" class="box1" required>
+        </div>
+
+        <button type="submit">Sign In</button>
+    </form>
+
+   <script src="./signin.js"></script>
+
+</div>
+
+</body>
+</html>
+
+

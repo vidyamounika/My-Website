@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page</title>
+    <link href="style.css" rel="stylesheet" >
+</head>
+<body>
+    <div class="navbar">
+    <div class="left-links">
+        <a href="./home.html">
+            <img src="./assets/images/logo.jpeg" alt="Logo" class="logo">
+        </a>
+        <a href="./home.html">Chaika Wellness Space</a>
+       
+    </div>
+    <div class="right-links">
+        <a href="./profile.html">Profile</a>
+        <a  href="./login.html" onclick=" return logout()">Log Out</a>
+    </div>
+</div>
+    <div>
+    <h2>Username:<span id="displayusername"></span></h2>
+    <h2>Password:<span id="displayId"></span></h2>
+    <h2>Email:<span id="displaymail"></span></h2>
+    <button type="submit">Back</button>
+
+</div>
+    
+</body>
+
+<script>
+    const username=localStorage.getItem("Username");
+
+    if(username){
+        document.getElementById("displayusername").textContent=username;
+    }else{
+        document.getElementById("displayusername").textContent="Guest";
+    }
+
+    const password=localStorage.getItem("Password");
+    if(password){
+        document.getElementById("displayId").textContent=password;
+    }else{
+        document.getElementById("displayId").textContent="Guest";
+    }
+
+    const mailId=localStorage.getItem("Email");
+    if(mailId){
+        document.getElementById("displaymail").textContent=mailId;
+    }else{
+        document.getElementById("displaymail").textContent="Guest";
+    }
+
+
+    document.querySelector("button").addEventListener("click",function(){
+        window.location.href="Yogamainpage.html";
+
+    }
+
+    )
+</script>
+</html>
